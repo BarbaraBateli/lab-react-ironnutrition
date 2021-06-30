@@ -1,9 +1,18 @@
 import React from 'react';
 
-
 class FoodBox extends React.Component {
+  state = {
+    quantity: 1,
+  };
+  handleChange = (event) => {
+    this.state({
+      quantity: Number(value),
+    });
+  };
+  render() {
+    const {name, calories, image} = this.props.food;
     return (
-        <div> className="box">
+        <div className="box">
   <article className="media">
     <div className="media-left">
       <figure className="image is-64x64">
